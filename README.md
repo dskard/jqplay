@@ -1,22 +1,18 @@
 # jqplay - examples of using the `jq` JSON processor
 
-#### Before we start
-
-##### JSON Data Types
+### Before we start
 
 A note about JSON data types: https://restfulapi.net/json-data-types/
 
-##### About `jq`
+About `jq`: https://stedolan.github.io/jq/manual
 
-https://stedolan.github.io/jq/manual
+Things you can do:
+1. Pull data out of JSON
+2. Filtering
+3. Reformat data back into your own JSON structure
+4. Reformat data into a table, with help from the `column` command
 
-4 things you can do:
-* pull data out of JSON
-* filtering
-* reformat data back into your own JSON structure
-* reformat data into a table, with help from the `column` command
-
-#### Getting Started
+### Getting Started
 
 Go to the RStudio Github web page:
 https://github.com/rstudio/
@@ -39,7 +35,7 @@ Note:
 $ curl -s -i https://api.github.com/orgs/rstudio/repos
 ```
 
-#### Pull data out of JSON
+### Pull data out of JSON
 
 https://stedolan.github.io/jq/manual/#Array/ObjectValueIterator:.[]
 https://stedolan.github.io/jq/manual/#ObjectIdentifier-Index:.foo,.foo.bar
@@ -79,7 +75,7 @@ $ curl -s https://api.github.com/orgs/rstudio/repos | jq '.[].name'
 "rmarkdown"
 ```
 
-#### Filtering
+### Filtering
 
 https://stedolan.github.io/jq/manual/#select(boolean_expression)
 
@@ -194,7 +190,7 @@ $ curl -s https://api.github.com/orgs/rstudio/repos |
 }
 ```
 
-#### Reformat data back into JSON
+### Reformat data back into JSON
 
 https://stedolan.github.io/jq/manual/#ObjectConstruction:{}
 
@@ -220,7 +216,7 @@ $ curl -s https://api.github.com/orgs/rstudio/repos |
 
 ```
 
-#### Reformat data into a table
+### Reformat data into a table
 
 ```
 $ curl -s https://api.github.com/orgs/rstudio/repos |
